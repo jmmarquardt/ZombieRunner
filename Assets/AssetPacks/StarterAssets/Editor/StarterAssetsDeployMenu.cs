@@ -111,7 +111,7 @@ namespace StarterAssets
             serializedObject.ApplyModifiedProperties();
         }
 
-        private static bool TryLocatePrefab(string name, string[] inFolders, Type[] requiredComponentTypes, out GameObject prefab, out string path)
+        private static bool TryLocatePrefab(string name, string[] inFolders, System.Type[] requiredComponentTypes, out GameObject prefab, out string path)
         {
             // Locate the player armature
             string[] allPrefabs = AssetDatabase.FindAssets("t:Prefab", inFolders);
