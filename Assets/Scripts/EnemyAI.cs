@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Timeline;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -33,7 +29,7 @@ public class EnemyAI : MonoBehaviour
         _distanceToTarget = Vector3.Distance(transform.position, _target.position);
         if (_isProvoked)
         {
-            EngageTarget(_target.position);
+            EngageTarget();
         }
         else if (_distanceToTarget <= _chaseRange)
         {
@@ -45,7 +41,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void EngageTarget(Vector3 targetPos)
+    void EngageTarget()
     {
         if (_distanceToTarget >= _navMeshAgent.stoppingDistance)
         {
