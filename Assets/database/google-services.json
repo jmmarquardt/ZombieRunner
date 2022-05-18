@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "358664136013",
+    "firebase_url": "https://farmfight-c7483-default-rtdb.firebaseio.com",
+    "project_id": "farmfight-c7483",
+    "storage_bucket": "farmfight-c7483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358664136013:android:e15ceda026320008b34304",
+        "android_client_info": {
+          "package_name": "com.bonjongames.farmfight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358664136013-dlgjb9iapvrrmk3p25m2n86mkbi0c51p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGpjx4oObnqE4AVkn1MgCfLVrf2lPKyeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358664136013-dlgjb9iapvrrmk3p25m2n86mkbi0c51p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "358664136013-m790kk3h5hej4eqoua9vcvsh7fjvgdp9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bonjongames.farmfight"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
