@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Android;
 
 public class Gun : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class Gun : MonoBehaviour
     Transform _firstPersonCamera;
     [SerializeField] [Range(25f, 200f)] 
     float _range = 100f;
+
+    [SerializeField] [Range(0f, 100f)] float _damage = 20f;
 
     void Update()
     {
@@ -18,9 +21,13 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(_firstPersonCamera.position, _firstPersonCamera.forward, out hit, _range);
-        if (hit.transform)
-            Debug.Log($"Player1 just shot {hit.transform.name} with {name}");
         
+        if (!Physics.Raycast(_firstPersonCamera.position, _firstPersonCamera.forward, out hit, _range)) { return; }
+        
+        Debug.Log($"Player1 just shot {hit.transform.name} with {name}");
+        // TODO: Add hit effect 
+        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        // call a method on EnemyHealth to decrease hit target's health
+        target.TakeDamage(_damage);
     }
 }
