@@ -22,12 +22,12 @@ public class Gun : MonoBehaviour
     {
         RaycastHit hit;
         
-        if (!Physics.Raycast(_firstPersonCamera.position, _firstPersonCamera.forward, out hit, _range)) { return; }
+        if (!Physics.Raycast(_firstPersonCamera.position, _firstPersonCamera.forward, out hit, _range)) return;
         
         Debug.Log($"Player1 just shot {hit.transform.name} with {name}");
         // TODO: Add hit effect 
         EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-        // call a method on EnemyHealth to decrease hit target's health
+        if (target == null) return;
         target.TakeDamage(_damage);
     }
 }
